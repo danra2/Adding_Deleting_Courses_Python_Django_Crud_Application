@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Delete A Course</title>
+  </head>
+  <body>
+    {% for variable in Courses %}
+    <h2>Are you sure you want to delete the following course?</h2>
+    <p>{{variable.course_name}}</p>
+    <p>{{variable.description}}</p>
+    <form action="/goback" method = "post">
+    {% csrf_token %}
+    <input type="submit" value = "No, I don't want to Delete this course">
+    </form>
+    <form action="/delete/{{variable.id}}" method = "post">
+    {% csrf_token %}
+    <input type="submit" value = "Yes, I want to Delete this course">
+    </form>
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- <h1>Hello World</h1>
+    {% for blog in blogs %}
+    <h5>{{blog.title}}</h5>
+    <p>{{blog.blog}}</p>
+    {% for comment in blogs%}
+    {{comment.comment}}
+    {%endfor%}
+    <form action="/courses" method = "post">
+
+      <textarea name = "name" rows="8" cols="40"></textarea>
+      <input type="submit" value = "Enter Comment on This Blog">
+    </form>
+    {% endfor %} -->
+
+  
+    <form action="index" method = "post">
+      {% csrf_token %}
+    <input type="submit" value = "No">
+    </form>
+  </body>
+</html>
